@@ -25,8 +25,8 @@
 
   //SampleViewController *svc = [SampleViewController new];
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
-  rootViewController.view = rootView;
+  UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[SampleViewController alloc] initWithView: rootView]];
+ // rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;

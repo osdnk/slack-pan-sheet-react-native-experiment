@@ -10,6 +10,21 @@ import UIKit
 import Foundation
 
 @objc class SampleViewController: UITableViewController {
+  var vieww : UIView
+  
+//  required init?(coder: NSCoder) {
+//    super.init(coder: coder)
+//  }
+  
+  @objc public init(view: UIView) {
+    self.vieww = view;
+    super.init(style: .plain)
+  }
+
+  
+  required init(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +34,9 @@ import Foundation
     private func setupView() {
         title = "PanModal"
 
-        navigationController?.navigationBar.titleTextAttributes = [
-            .font: UIFont(name: "Lato-Bold", size: 17)!
-        ]
+//        navigationController?.navigationBar.titleTextAttributes = [
+//            .font: UIFont(name: "Lato-Bold", size: 17)!
+//        ]
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
         tableView.tableFooterView = UIView()
@@ -55,7 +70,11 @@ import Foundation
             return
         }
         dismiss(animated: true, completion: nil)
+      if (rowType.presentable.string.elementsEqual("User Groups")) {
+        presentPanModal(UserGroupViewController(view: vieww))
+      } else {
         presentPanModal(rowType.presentable.rowVC)
+      }
     }
 }
 
@@ -83,8 +102,8 @@ private extension SampleViewController {
             case .alert: return Alert()
             case .transientAlert: return TransientAlert()
             case .userGroups: return UserGroup()
-            case .stacked: return Stacked()
-            case .navController: return Navigation()
+            case .stacked: return UserGroup()
+            case .navController: return UserGroup()
             }
         }
 
@@ -110,17 +129,17 @@ private extension SampleViewController {
 
         struct UserGroup: RowPresentable {
             let string: String = "User Groups"
-            let rowVC: PanModalPresentable.LayoutType = UserGroupViewController()
+            let rowVC: PanModalPresentable.LayoutType = AlertViewController()
         }
 
-        struct Navigation: RowPresentable {
-            let string: String = "User Groups (NavigationController)"
-            let rowVC: PanModalPresentable.LayoutType = NavigationController()
-        }
+//        struct Navigation: RowPresentable {
+//            let string: String = "User Groups (NavigationController)"
+//            let rowVC: PanModalPresentable.LayoutType = NavigationController()
+//        }
 
-        struct Stacked: RowPresentable {
-            let string: String = "User Groups (Stacked)"
-            let rowVC: PanModalPresentable.LayoutType = UserGroupStackedViewController()
-        }
+//        struct Stacked: RowPresentable {
+//            let string: String = "User Groups (Stacked)"
+//            let rowVC: PanModalPresentable.LayoutType = UserGroupStackedViewController()
+//        }
     }
 }
