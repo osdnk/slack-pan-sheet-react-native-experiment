@@ -22,6 +22,7 @@ import UIKit
  it's starting position through manipulating the shortFormHeight
  */
 
+@available(iOS 10.0, *)
 public class PanModalPresentationAnimator: NSObject {
 
     /**
@@ -141,6 +142,7 @@ public class PanModalPresentationAnimator: NSObject {
 
 // MARK: - UIViewControllerAnimatedTransitioning Delegate
 
+@available(iOS 10.0, *)
 extension PanModalPresentationAnimator: UIViewControllerAnimatedTransitioning {
 
     /**
