@@ -38,10 +38,17 @@ extension UIViewController: PanModalPresenter {
 
      - Note: sourceView & sourceRect are only required for presentation on an iPad.
      */
-    public func presentPanModal(_ viewControllerToPresent: PanModalPresentable.LayoutType, sourceView: UIView? = nil, sourceRect: CGRect = .zero) {
+    @objc public func presentPanModal() {
 
+      let viewControllerToPresent = UserGroupStackedViewController()
+      let sourceView: UIView? = nil, sourceRect: CGRect = .zero
         /**
          Here, we deliberately do not check for size classes. More info in `PanModalPresentationDelegate`
+       
+       
+      
+       
+       
          */
 
         if UIDevice.current.userInterfaceIdiom == .pad {

@@ -10,15 +10,12 @@ import UIKit
 import Foundation
 
 @objc class SampleViewController: UIViewController {
-  var vieww : UIView
 
   
-  @objc public init(view: UIView) {
-    self.vieww = view;
+  @objc public init() {
     super.init(nibName:nil, bundle:nil)
     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-      let rowType = RowType(rawValue: 5)
-      self.presentPanModal((rowType?.presentable.rowVC)!)
+      self.presentPanModal()
     }
   }
   

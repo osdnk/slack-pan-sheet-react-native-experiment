@@ -25,8 +25,12 @@
 
   //SampleViewController *svc = [SampleViewController new];
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[SampleViewController alloc] initWithView: rootView]];
+  UIViewController *rootViewController = [[UIViewController alloc] init];
   rootViewController.view = rootView;
+  dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2);
+  dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+    [rootViewController presentPanModal];
+  });
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;

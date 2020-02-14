@@ -16,7 +16,7 @@ class UserGroupStackedViewController: UserGroupViewController {
         let presentable = members[indexPath.row]
         let viewController = StackedProfileViewController(presentable: presentable)
 
-        presentPanModal(viewController)
+        presentPanModal()
     }
 
     override var shortFormHeight: PanModalHeight {
