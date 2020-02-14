@@ -19,7 +19,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* samplemapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* samplemapsTests.m */; };
 		370C93634F48C1B29C8F9964 /* libPods-samplemaps-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6951794BD486DA7F690A98 /* libPods-samplemaps-tvOSTests.a */; };
 		66FD053023CE32CB00C65D3C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD052F23CE32CB00C65D3C /* File.swift */; };
-		66FD053223CE390F00C65D3C /* File2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053123CE390F00C65D3C /* File2.swift */; };
 		66FD053523CE397300C65D3C /* Fileee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053423CE397300C65D3C /* Fileee.swift */; };
 		66FD057023CE3A6700C65D3C /* PanModalPresentable+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053A23CE3A6600C65D3C /* PanModalPresentable+Defaults.swift */; };
 		66FD057123CE3A6700C65D3C /* PanModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053B23CE3A6600C65D3C /* PanModalPresentable.swift */; };
@@ -99,7 +98,6 @@
 		5B6951794BD486DA7F690A98 /* libPods-samplemaps-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-samplemaps-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FD052E23CE32CB00C65D3C /* samplemaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "samplemaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		66FD052F23CE32CB00C65D3C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		66FD053123CE390F00C65D3C /* File2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File2.swift; sourceTree = "<group>"; };
 		66FD053423CE397300C65D3C /* Fileee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fileee.swift; sourceTree = "<group>"; };
 		66FD053A23CE3A6600C65D3C /* PanModalPresentable+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+Defaults.swift"; sourceTree = "<group>"; };
 		66FD053B23CE3A6600C65D3C /* PanModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentable.swift; sourceTree = "<group>"; };
@@ -464,7 +462,6 @@
 				66FD053723CE3A6600C65D3C /* PanModal */,
 				66FD054E23CE3A6600C65D3C /* Sample */,
 				66FD053323CE394A00C65D3C /* SAmpl */,
-				66FD053123CE390F00C65D3C /* File2.swift */,
 				66FD052F23CE32CB00C65D3C /* File.swift */,
 				13B07FAE1A68108700A75B9A /* samplemaps */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -830,7 +827,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				66FD058423CE3A6700C65D3C /* FullScreenNavController.swift in Sources */,
-				66FD053223CE390F00C65D3C /* File2.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				66FD053523CE397300C65D3C /* Fileee.swift in Sources */,
 				66FD059023CE3A6700C65D3C /* UserGroupHeaderView.swift in Sources */,
