@@ -29,7 +29,7 @@ protocol PanModalPresenter: AnyObject {
     /**
      Presents a view controller that conforms to the PanModalPresentable protocol
      */
-    func presentPanModal()
+    func presentPanModal(view: UIView)
 
 }
 #endif

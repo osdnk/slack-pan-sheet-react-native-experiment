@@ -8,7 +8,8 @@
 
 import UIKit
 
-class UserGroupViewController: UITableViewController, PanModalPresentable {
+class UserGroupViewController: UIViewController, PanModalPresentable {
+  
 
     let members: [UserGroupMemberPresentable] = [
         UserGroupMemberPresentable(name: "Naida Schill ✈️", role: "Staff Engineer - Mobile DevXP", avatarBackgroundColor: #colorLiteral(red: 0.7215686275, green: 0.9098039216, blue: 0.5607843137, alpha: 1)),
@@ -42,55 +43,69 @@ class UserGroupViewController: UITableViewController, PanModalPresentable {
 
     let headerPresentable = UserGroupHeaderPresentable.init(handle: "ios-engs", description: "iOS Engineers", memberCount: 10)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupTableView()
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        setupTableView()
+//    }
 
     // MARK: - View Configurations
 
-    func setupTableView() {
-
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.1137254902, blue: 0.1294117647, alpha: 1)
-        tableView.register(UserGroupMemberCell.self, forCellReuseIdentifier: "cell")
+//    func setupTableView() {
+//
+//        tableView.separatorStyle = .none
+//        tableView.backgroundColor = #colorLiteral(red: 0.1019607843, green: 0.1137254902, blue: 0.1294117647, alpha: 1)
+//        tableView.register(UserGroupMemberCell.self, forCellReuseIdentifier: "cell")
+//    }
+//
+//    // MARK: - UITableViewDataSource
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return members.count
+//    }
+//
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UserGroupMemberCell
+//            else { return UITableViewCell() }
+//
+//        cell.configure(with: members[indexPath.row])
+//        return cell
+//    }
+//
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 60.0
+//    }
+//
+//    // MARK: - UITableViewDelegate
+//
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        headerView.configure(with: headerPresentable)
+//        return headerView
+//    }
+//
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+//
+//    // MARK: - Pan Modal Presentable
+//
+  
+  
+  func findChildScrollView(view: UIView) -> UIScrollView? {
+    if view.subviews.count == 0 {
+      return nil
     }
-
-    // MARK: - UITableViewDataSource
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return members.count
+    let fisrtChild = view.subviews[0]
+    if fisrtChild is UIScrollView {
+      return fisrtChild as? UIScrollView
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? UserGroupMemberCell
-            else { return UITableViewCell() }
-
-        cell.configure(with: members[indexPath.row])
-        return cell
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
-    }
-
-    // MARK: - UITableViewDelegate
-
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        headerView.configure(with: headerPresentable)
-        return headerView
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-
-    // MARK: - Pan Modal Presentable
-
+    return findChildScrollView(view: fisrtChild)
+  }
+  
     var panScrollable: UIScrollView? {
-        return tableView
+      
+      return findChildScrollView(view: self.view!)
     }
 
     var shortFormHeight: PanModalHeight {

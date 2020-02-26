@@ -8,12 +8,13 @@
 
 import React from 'react';
 import {
+  Button,
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
   Text,
-  StatusBar,
+  StatusBar, NativeModules,
 } from 'react-native';
 
 import {
@@ -24,7 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+
+const App: () => React$Node = () => () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -32,6 +34,10 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
+          <Button
+            title="XX"
+            onPress={() => NativeModules.PanManager.present()}
+          />
           <Header />
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>

@@ -11,6 +11,64 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import "samplemaps-Swift.h"
+#import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
+
+@interface PanManager : RCTEventEmitter <RCTBridgeModule>
+@end
+@implementation PanManager {
+  RCTRootView* rootView;
+}
+
+//@synthesize bridge = _bridge;
+
+RCT_EXPORT_MODULE();
+
+//- (instancetype)init
+//{
+//  self = [super init];
+//  //  if (self) {
+//  //      rootView = [[RCTRootView alloc] initWithBridge:self.bridge
+//  //                                                     moduleName:@"appName2"
+//  //                                              initialProperties:nil];
+//  //  }
+//  return self;
+//}
+
+- (NSArray<NSString *> *)supportedEvents {
+  return @[];
+}
+
+- (void)setBridge:(RCTBridge *)bridge {
+  [super setBridge:bridge];
+
+  
+}
+
++ (BOOL)requiresMainQueueSetup
+{
+  return YES;
+}
+
+- (dispatch_queue_t)methodQueue
+{
+  return dispatch_get_main_queue();
+}
+
+
+RCT_EXPORT_METHOD(present)
+{
+  UIView* rootView2 = [[RCTRootView alloc] initWithBridge:self.bridge
+                                      moduleName:@"appName2"
+                               initialProperties:nil];
+  
+  UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+  [rootViewController presentPanModalWithView:rootView2];
+  
+}
+
+@end
+
 
 @implementation AppDelegate
 
@@ -20,17 +78,14 @@
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"samplemaps"
                                             initialProperties:nil];
-
+  
+  
+  
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-
-  //SampleViewController *svc = [SampleViewController new];
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [[UIViewController alloc] init];
   rootViewController.view = rootView;
-  dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2);
-  dispatch_after(delay, dispatch_get_main_queue(), ^(void){
-    [rootViewController presentPanModal];
-  });
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;

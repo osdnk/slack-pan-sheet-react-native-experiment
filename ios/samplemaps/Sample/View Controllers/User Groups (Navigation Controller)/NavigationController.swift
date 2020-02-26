@@ -69,13 +69,13 @@ private class NavUserGroups: UserGroupViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style: .plain, target: nil, action: nil)
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-
-        let presentable = members[indexPath.row]
-        let viewController = ProfileViewController(presentable: presentable)
-
-        navigationController?.pushViewController(viewController, animated: true)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//
+//        let presentable = members[indexPath.row]
+//        let viewController = ProfileViewController(presentable: presentable)
+//
+//        navigationController?.pushViewController(viewController, animated: true)
+//    }
 }
 

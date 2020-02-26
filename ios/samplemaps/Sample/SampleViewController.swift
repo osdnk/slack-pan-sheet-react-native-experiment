@@ -14,9 +14,9 @@ import Foundation
   
   @objc public init() {
     super.init(nibName:nil, bundle:nil)
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-      self.presentPanModal()
-    }
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+//      self.presentPanModal()
+//    }
   }
   
   
