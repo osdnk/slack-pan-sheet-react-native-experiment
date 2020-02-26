@@ -11,7 +11,7 @@ import UIKit
 import PanModal
 
 
-class UserGroupViewController: UIViewController, PanModalPresentable {
+class PanModalViewController: UIViewController, PanModalPresentable {
   
   var isShortFormEnabled = true
   
@@ -70,7 +70,7 @@ class UserGroupViewController: UIViewController, PanModalPresentable {
 extension UIViewController {
   @objc public func presentPanModal(view: UIView) {
     
-    let viewControllerToPresent: UIViewController & PanModalPresentable = UserGroupViewController()
+    let viewControllerToPresent: UIViewController & PanModalPresentable = PanModalViewController()
     viewControllerToPresent.view = view
     let sourceView: UIView? = nil, sourceRect: CGRect = .zero
     
