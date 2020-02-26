@@ -38,9 +38,12 @@ const App: () => React$Node = (store) => () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
+        <View style={{ width: '100%', height: 100, backgroundColor: 'red' }}>
+        </View>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+          style={styles.scrollView}
+        >
           <Button
             title="XX"
             onPress={() => NativeModules.PanManager.present()}
@@ -92,6 +95,7 @@ const App: () => React$Node = (store) => () => {
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
+    marginBottom: 100
   },
   engine: {
     position: 'absolute',
