@@ -20,20 +20,9 @@
   RCTRootView* rootView;
 }
 
-//@synthesize bridge = _bridge;
-
 RCT_EXPORT_MODULE();
 
-//- (instancetype)init
-//{
-//  self = [super init];
-//  //  if (self) {
-//  //      rootView = [[RCTRootView alloc] initWithBridge:self.bridge
-//  //                                                     moduleName:@"appName2"
-//  //                                              initialProperties:nil];
-//  //  }
-//  return self;
-//}
+
 
 - (NSArray<NSString *> *)supportedEvents {
   return @[];
@@ -64,7 +53,6 @@ RCT_EXPORT_METHOD(present)
   
   UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
   [rootViewController presentPanModalWithView:rootView];
-  
 }
 
 @end

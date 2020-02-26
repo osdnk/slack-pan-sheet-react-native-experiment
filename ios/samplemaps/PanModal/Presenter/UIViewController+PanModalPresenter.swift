@@ -157,7 +157,7 @@ class UserGroupStackedViewController: UserGroupViewController {
 }
 
 
-extension UIViewController: PanModalPresenter2 {
+extension UIViewController {
   @objc public func presentPanModal(view: UIView) {
 
     let viewControllerToPresent: UIViewController & PanModalPresentable = UserGroupStackedViewController()

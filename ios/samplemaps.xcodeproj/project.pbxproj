@@ -18,11 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* samplemapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* samplemapsTests.m */; };
 		370C93634F48C1B29C8F9964 /* libPods-samplemaps-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6951794BD486DA7F690A98 /* libPods-samplemaps-tvOSTests.a */; };
-		66FD053023CE32CB00C65D3C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD052F23CE32CB00C65D3C /* File.swift */; };
-		66FD053523CE397300C65D3C /* Fileee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053423CE397300C65D3C /* Fileee.swift */; };
 		66FD057523CE3A6700C65D3C /* UIViewController+PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054123CE3A6600C65D3C /* UIViewController+PanModalPresenter.swift */; };
-		66FD057623CE3A6700C65D3C /* PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054223CE3A6600C65D3C /* PanModalPresenter.swift */; };
-		66FD057D23CE3A6700C65D3C /* Info2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66FD054D23CE3A6600C65D3C /* Info2.plist */; };
 		949036693F5F7BDCD31316AE /* libPods-samplemapsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4781448EFE93F488C1D265 /* libPods-samplemapsTests.a */; };
 		F85335AA4D96CBE5B13800BF /* libPods-samplemaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1B9D9BED28F030D7D22A02 /* libPods-samplemaps.a */; };
 /* End PBXBuildFile section */
@@ -65,13 +61,7 @@
 		51F2D3DB1F24B89AC7D51D37 /* Pods-samplemaps-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-samplemaps-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-samplemaps-tvOSTests/Pods-samplemaps-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		53AAEB68F85C7D4271C2D01D /* Pods-samplemaps-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-samplemaps-tvOS.release.xcconfig"; path = "Target Support Files/Pods-samplemaps-tvOS/Pods-samplemaps-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		5B6951794BD486DA7F690A98 /* libPods-samplemaps-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-samplemaps-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		66FD052E23CE32CB00C65D3C /* samplemaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "samplemaps-Bridging-Header.h"; sourceTree = "<group>"; };
-		66FD052F23CE32CB00C65D3C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		66FD053423CE397300C65D3C /* Fileee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fileee.swift; sourceTree = "<group>"; };
-		66FD053F23CE3A6600C65D3C /* PanModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanModal.h; sourceTree = "<group>"; };
 		66FD054123CE3A6600C65D3C /* UIViewController+PanModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PanModalPresenter.swift"; sourceTree = "<group>"; };
-		66FD054223CE3A6600C65D3C /* PanModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresenter.swift; sourceTree = "<group>"; };
-		66FD054D23CE3A6600C65D3C /* Info2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info2.plist; sourceTree = "<group>"; };
 		6C4781448EFE93F488C1D265 /* libPods-samplemapsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-samplemapsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8637AC639FF9D086EAB01F78 /* Pods-samplemapsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-samplemapsTests.debug.xcconfig"; path = "Target Support Files/Pods-samplemapsTests/Pods-samplemapsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97CF5751645531A578AA673A /* Pods-samplemapsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-samplemapsTests.release.xcconfig"; path = "Target Support Files/Pods-samplemapsTests/Pods-samplemapsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,38 +151,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		66FD053323CE394A00C65D3C /* SAmpl */ = {
-			isa = PBXGroup;
-			children = (
-				66FD053423CE397300C65D3C /* Fileee.swift */,
-			);
-			path = SAmpl;
-			sourceTree = "<group>";
-		};
 		66FD053723CE3A6600C65D3C /* PanModal */ = {
 			isa = PBXGroup;
 			children = (
-				66FD053823CE3A6600C65D3C /* untitled folder */,
-				66FD053F23CE3A6600C65D3C /* PanModal.h */,
 				66FD054023CE3A6600C65D3C /* Presenter */,
-				66FD054D23CE3A6600C65D3C /* Info2.plist */,
 			);
 			name = PanModal;
 			path = samplemaps/PanModal;
-			sourceTree = "<group>";
-		};
-		66FD053823CE3A6600C65D3C /* untitled folder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "untitled folder";
 			sourceTree = "<group>";
 		};
 		66FD054023CE3A6600C65D3C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				66FD054123CE3A6600C65D3C /* UIViewController+PanModalPresenter.swift */,
-				66FD054223CE3A6600C65D3C /* PanModalPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -223,15 +194,12 @@
 			isa = PBXGroup;
 			children = (
 				66FD053723CE3A6600C65D3C /* PanModal */,
-				66FD053323CE394A00C65D3C /* SAmpl */,
-				66FD052F23CE32CB00C65D3C /* File.swift */,
 				13B07FAE1A68108700A75B9A /* samplemaps */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* samplemapsTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8350207D5A4B7C525029AAFE /* Pods */,
-				66FD052E23CE32CB00C65D3C /* samplemaps-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -398,7 +366,6 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				66FD057D23CE3A6700C65D3C /* Info2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,11 +557,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				66FD053523CE397300C65D3C /* Fileee.swift in Sources */,
-				66FD053023CE32CB00C65D3C /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				66FD057523CE3A6700C65D3C /* UIViewController+PanModalPresenter.swift in Sources */,
-				66FD057623CE3A6700C65D3C /* PanModalPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
