@@ -41,7 +41,10 @@ RCT_EXPORT_MODULE();
 
 - (void)setBridge:(RCTBridge *)bridge {
   [super setBridge:bridge];
-
+  rootView = [[RCTRootView alloc] initWithBridge:bridge
+                                      moduleName:@"appName2"
+                               initialProperties:nil];
+  
   
 }
 
@@ -58,12 +61,9 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(present)
 {
-  UIView* rootView2 = [[RCTRootView alloc] initWithBridge:self.bridge
-                                      moduleName:@"appName2"
-                               initialProperties:nil];
   
   UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-  [rootViewController presentPanModalWithView:rootView2];
+  [rootViewController presentPanModalWithView:rootView];
   
 }
 

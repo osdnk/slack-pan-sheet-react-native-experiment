@@ -95,7 +95,7 @@ open class PanModalPresentationController: UIPresentationController {
     /**
      Configuration object for PanModalPresentationController
      */
-    private var presentable: PanModalPresentable? {
+    private var presentable: PanModalPresentable2? {
         return presentedViewController as? PanModalPresentable
     }
 
@@ -414,7 +414,7 @@ private extension PanModalPresentationController {
      */
     func configureViewLayout() {
 
-        guard let layoutPresentable = presentedViewController as? PanModalPresentable.LayoutType
+        guard let layoutPresentable = presentedViewController as? PanModalPresentable2.LayoutType
             else { return }
 
         shortFormYPosition = layoutPresentable.shortFormYPos

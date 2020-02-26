@@ -26,7 +26,14 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 
-const App: () => React$Node = () => () => {
+const App: () => React$Node = (store) => () => {
+  const [value, setValue] = React.useState(store.value);
+  React.useEffect(() => {
+    setValue(store.value)
+    store.addListener(value => {
+      setValue(value)
+    })
+  }, [])
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -37,6 +44,10 @@ const App: () => React$Node = () => () => {
           <Button
             title="XX"
             onPress={() => NativeModules.PanManager.present()}
+          />
+          <Button
+            title={value.toString()}
+            onPress={store.increment}
           />
           <Header />
           {global.HermesInternal == null ? null : (

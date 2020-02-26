@@ -8,6 +8,8 @@
 
 import UIKit
 
+import PanModal
+
 class UserGroupViewController: UIViewController, PanModalPresentable {
   
 

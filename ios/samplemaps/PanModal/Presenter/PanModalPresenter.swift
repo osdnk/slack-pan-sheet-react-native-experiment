@@ -18,7 +18,7 @@ import UIKit
                                              sourceRect: .zero)
  ```
  */
-protocol PanModalPresenter: AnyObject {
+protocol PanModalPresenter2: AnyObject {
 
     /**
      A flag that returns true if the current presented view controller

@@ -20,9 +20,9 @@ struct PanModalAnimator {
         static let defaultTransitionDuration: TimeInterval = 0.5
     }
 
-    static func animate(_ animations: @escaping PanModalPresentable.AnimationBlockType,
-                        config: PanModalPresentable?,
-                        _ completion: PanModalPresentable.AnimationCompletionType? = nil) {
+    static func animate(_ animations: @escaping PanModalPresentable2.AnimationBlockType,
+                        config: PanModalPresentable2?,
+                        _ completion: PanModalPresentable2.AnimationCompletionType? = nil) {
 
         let transitionDuration = config?.transitionDuration ?? Constants.defaultTransitionDuration
         let springDamping = config?.springDamping ?? 1.0

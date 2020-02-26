@@ -20,40 +20,9 @@
 		370C93634F48C1B29C8F9964 /* libPods-samplemaps-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6951794BD486DA7F690A98 /* libPods-samplemaps-tvOSTests.a */; };
 		66FD053023CE32CB00C65D3C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD052F23CE32CB00C65D3C /* File.swift */; };
 		66FD053523CE397300C65D3C /* Fileee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053423CE397300C65D3C /* Fileee.swift */; };
-		66FD057023CE3A6700C65D3C /* PanModalPresentable+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053A23CE3A6600C65D3C /* PanModalPresentable+Defaults.swift */; };
-		66FD057123CE3A6700C65D3C /* PanModalPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053B23CE3A6600C65D3C /* PanModalPresentable.swift */; };
-		66FD057223CE3A6700C65D3C /* PanModalPresentable+LayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053C23CE3A6600C65D3C /* PanModalPresentable+LayoutHelpers.swift */; };
-		66FD057323CE3A6700C65D3C /* PanModalHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053D23CE3A6600C65D3C /* PanModalHeight.swift */; };
-		66FD057423CE3A6700C65D3C /* PanModalPresentable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD053E23CE3A6600C65D3C /* PanModalPresentable+UIViewController.swift */; };
 		66FD057523CE3A6700C65D3C /* UIViewController+PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054123CE3A6600C65D3C /* UIViewController+PanModalPresenter.swift */; };
 		66FD057623CE3A6700C65D3C /* PanModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054223CE3A6600C65D3C /* PanModalPresenter.swift */; };
-		66FD057723CE3A6700C65D3C /* PanModalPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054423CE3A6600C65D3C /* PanModalPresentationDelegate.swift */; };
-		66FD057823CE3A6700C65D3C /* PanModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054623CE3A6600C65D3C /* PanModalAnimator.swift */; };
-		66FD057923CE3A6700C65D3C /* PanModalPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054723CE3A6600C65D3C /* PanModalPresentationAnimator.swift */; };
-		66FD057A23CE3A6700C65D3C /* PanModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054923CE3A6600C65D3C /* PanModalPresentationController.swift */; };
-		66FD057B23CE3A6700C65D3C /* PanContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054B23CE3A6600C65D3C /* PanContainerView.swift */; };
-		66FD057C23CE3A6700C65D3C /* DimmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054C23CE3A6600C65D3C /* DimmedView.swift */; };
 		66FD057D23CE3A6700C65D3C /* Info2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66FD054D23CE3A6600C65D3C /* Info2.plist */; };
-		66FD057E23CE3A6700C65D3C /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD054F23CE3A6600C65D3C /* SampleViewController.swift */; };
-		66FD057F23CE3A6700C65D3C /* Preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 66FD055123CE3A6600C65D3C /* Preview.png */; };
-		66FD058023CE3A6700C65D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66FD055223CE3A6600C65D3C /* Assets.xcassets */; };
-		66FD058123CE3A6700C65D3C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66FD055423CE3A6600C65D3C /* Lato-Bold.ttf */; };
-		66FD058223CE3A6700C65D3C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66FD055523CE3A6600C65D3C /* Lato-Regular.ttf */; };
-		66FD058423CE3A6700C65D3C /* FullScreenNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD055923CE3A6600C65D3C /* FullScreenNavController.swift */; };
-		66FD058523CE3A6700C65D3C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD055B23CE3A6600C65D3C /* ProfileViewController.swift */; };
-		66FD058623CE3A6700C65D3C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD055C23CE3A6600C65D3C /* NavigationController.swift */; };
-		66FD058723CE3A6700C65D3C /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD055E23CE3A6600C65D3C /* AlertViewController.swift */; };
-		66FD058823CE3A6700C65D3C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD055F23CE3A6600C65D3C /* AlertView.swift */; };
-		66FD058923CE3A6700C65D3C /* StackedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056123CE3A6600C65D3C /* StackedProfileViewController.swift */; };
-		66FD058A23CE3A6700C65D3C /* UserGroupStackedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056223CE3A6600C65D3C /* UserGroupStackedViewController.swift */; };
-		66FD058B23CE3A6700C65D3C /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056423CE3A6600C65D3C /* BasicViewController.swift */; };
-		66FD058C23CE3A6700C65D3C /* TransientAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056623CE3A6700C65D3C /* TransientAlertViewController.swift */; };
-		66FD058D23CE3A6700C65D3C /* UserGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056823CE3A6700C65D3C /* UserGroupViewController.swift */; };
-		66FD058E23CE3A6700C65D3C /* UserGroupMemberPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056A23CE3A6700C65D3C /* UserGroupMemberPresentable.swift */; };
-		66FD058F23CE3A6700C65D3C /* UserGroupHeaderPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056B23CE3A6700C65D3C /* UserGroupHeaderPresentable.swift */; };
-		66FD059023CE3A6700C65D3C /* UserGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056D23CE3A6700C65D3C /* UserGroupHeaderView.swift */; };
-		66FD059123CE3A6700C65D3C /* UserGroupMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056E23CE3A6700C65D3C /* UserGroupMemberCell.swift */; };
-		66FD059223CE3A6700C65D3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD056F23CE3A6700C65D3C /* AppDelegate.swift */; };
 		949036693F5F7BDCD31316AE /* libPods-samplemapsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4781448EFE93F488C1D265 /* libPods-samplemapsTests.a */; };
 		F85335AA4D96CBE5B13800BF /* libPods-samplemaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1B9D9BED28F030D7D22A02 /* libPods-samplemaps.a */; };
 /* End PBXBuildFile section */
@@ -99,41 +68,10 @@
 		66FD052E23CE32CB00C65D3C /* samplemaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "samplemaps-Bridging-Header.h"; sourceTree = "<group>"; };
 		66FD052F23CE32CB00C65D3C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		66FD053423CE397300C65D3C /* Fileee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fileee.swift; sourceTree = "<group>"; };
-		66FD053A23CE3A6600C65D3C /* PanModalPresentable+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+Defaults.swift"; sourceTree = "<group>"; };
-		66FD053B23CE3A6600C65D3C /* PanModalPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentable.swift; sourceTree = "<group>"; };
-		66FD053C23CE3A6600C65D3C /* PanModalPresentable+LayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+LayoutHelpers.swift"; sourceTree = "<group>"; };
-		66FD053D23CE3A6600C65D3C /* PanModalHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalHeight.swift; sourceTree = "<group>"; };
-		66FD053E23CE3A6600C65D3C /* PanModalPresentable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PanModalPresentable+UIViewController.swift"; sourceTree = "<group>"; };
 		66FD053F23CE3A6600C65D3C /* PanModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanModal.h; sourceTree = "<group>"; };
 		66FD054123CE3A6600C65D3C /* UIViewController+PanModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PanModalPresenter.swift"; sourceTree = "<group>"; };
 		66FD054223CE3A6600C65D3C /* PanModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresenter.swift; sourceTree = "<group>"; };
-		66FD054423CE3A6600C65D3C /* PanModalPresentationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentationDelegate.swift; sourceTree = "<group>"; };
-		66FD054623CE3A6600C65D3C /* PanModalAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalAnimator.swift; sourceTree = "<group>"; };
-		66FD054723CE3A6600C65D3C /* PanModalPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentationAnimator.swift; sourceTree = "<group>"; };
-		66FD054923CE3A6600C65D3C /* PanModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanModalPresentationController.swift; sourceTree = "<group>"; };
-		66FD054B23CE3A6600C65D3C /* PanContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanContainerView.swift; sourceTree = "<group>"; };
-		66FD054C23CE3A6600C65D3C /* DimmedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmedView.swift; sourceTree = "<group>"; };
 		66FD054D23CE3A6600C65D3C /* Info2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info2.plist; sourceTree = "<group>"; };
-		66FD054F23CE3A6600C65D3C /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		66FD055123CE3A6600C65D3C /* Preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Preview.png; sourceTree = "<group>"; };
-		66FD055223CE3A6600C65D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		66FD055423CE3A6600C65D3C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
-		66FD055523CE3A6600C65D3C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
-		66FD055923CE3A6600C65D3C /* FullScreenNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenNavController.swift; sourceTree = "<group>"; };
-		66FD055B23CE3A6600C65D3C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		66FD055C23CE3A6600C65D3C /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		66FD055E23CE3A6600C65D3C /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		66FD055F23CE3A6600C65D3C /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		66FD056123CE3A6600C65D3C /* StackedProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedProfileViewController.swift; sourceTree = "<group>"; };
-		66FD056223CE3A6600C65D3C /* UserGroupStackedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupStackedViewController.swift; sourceTree = "<group>"; };
-		66FD056423CE3A6600C65D3C /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
-		66FD056623CE3A6700C65D3C /* TransientAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransientAlertViewController.swift; sourceTree = "<group>"; };
-		66FD056823CE3A6700C65D3C /* UserGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupViewController.swift; sourceTree = "<group>"; };
-		66FD056A23CE3A6700C65D3C /* UserGroupMemberPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupMemberPresentable.swift; sourceTree = "<group>"; };
-		66FD056B23CE3A6700C65D3C /* UserGroupHeaderPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupHeaderPresentable.swift; sourceTree = "<group>"; };
-		66FD056D23CE3A6700C65D3C /* UserGroupHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupHeaderView.swift; sourceTree = "<group>"; };
-		66FD056E23CE3A6700C65D3C /* UserGroupMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupMemberCell.swift; sourceTree = "<group>"; };
-		66FD056F23CE3A6700C65D3C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C4781448EFE93F488C1D265 /* libPods-samplemapsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-samplemapsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8637AC639FF9D086EAB01F78 /* Pods-samplemapsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-samplemapsTests.debug.xcconfig"; path = "Target Support Files/Pods-samplemapsTests/Pods-samplemapsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97CF5751645531A578AA673A /* Pods-samplemapsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-samplemapsTests.release.xcconfig"; path = "Target Support Files/Pods-samplemapsTests/Pods-samplemapsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,13 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				66FD053823CE3A6600C65D3C /* untitled folder */,
-				66FD053923CE3A6600C65D3C /* Presentable */,
 				66FD053F23CE3A6600C65D3C /* PanModal.h */,
 				66FD054023CE3A6600C65D3C /* Presenter */,
-				66FD054323CE3A6600C65D3C /* Delegate */,
-				66FD054523CE3A6600C65D3C /* Animator */,
-				66FD054823CE3A6600C65D3C /* Controller */,
-				66FD054A23CE3A6600C65D3C /* View */,
 				66FD054D23CE3A6600C65D3C /* Info2.plist */,
 			);
 			name = PanModal;
@@ -255,18 +188,6 @@
 			path = "untitled folder";
 			sourceTree = "<group>";
 		};
-		66FD053923CE3A6600C65D3C /* Presentable */ = {
-			isa = PBXGroup;
-			children = (
-				66FD053A23CE3A6600C65D3C /* PanModalPresentable+Defaults.swift */,
-				66FD053B23CE3A6600C65D3C /* PanModalPresentable.swift */,
-				66FD053C23CE3A6600C65D3C /* PanModalPresentable+LayoutHelpers.swift */,
-				66FD053D23CE3A6600C65D3C /* PanModalHeight.swift */,
-				66FD053E23CE3A6600C65D3C /* PanModalPresentable+UIViewController.swift */,
-			);
-			path = Presentable;
-			sourceTree = "<group>";
-		};
 		66FD054023CE3A6600C65D3C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,164 +195,6 @@
 				66FD054223CE3A6600C65D3C /* PanModalPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		66FD054323CE3A6600C65D3C /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				66FD054423CE3A6600C65D3C /* PanModalPresentationDelegate.swift */,
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
-		66FD054523CE3A6600C65D3C /* Animator */ = {
-			isa = PBXGroup;
-			children = (
-				66FD054623CE3A6600C65D3C /* PanModalAnimator.swift */,
-				66FD054723CE3A6600C65D3C /* PanModalPresentationAnimator.swift */,
-			);
-			path = Animator;
-			sourceTree = "<group>";
-		};
-		66FD054823CE3A6600C65D3C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				66FD054923CE3A6600C65D3C /* PanModalPresentationController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		66FD054A23CE3A6600C65D3C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				66FD054B23CE3A6600C65D3C /* PanContainerView.swift */,
-				66FD054C23CE3A6600C65D3C /* DimmedView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		66FD054E23CE3A6600C65D3C /* Sample */ = {
-			isa = PBXGroup;
-			children = (
-				66FD054F23CE3A6600C65D3C /* SampleViewController.swift */,
-				66FD055023CE3A6600C65D3C /* Resources */,
-				66FD055723CE3A6600C65D3C /* View Controllers */,
-				66FD056F23CE3A6700C65D3C /* AppDelegate.swift */,
-			);
-			name = Sample;
-			path = samplemaps/Sample;
-			sourceTree = "<group>";
-		};
-		66FD055023CE3A6600C65D3C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				66FD055123CE3A6600C65D3C /* Preview.png */,
-				66FD055223CE3A6600C65D3C /* Assets.xcassets */,
-				66FD055323CE3A6600C65D3C /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		66FD055323CE3A6600C65D3C /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				66FD055423CE3A6600C65D3C /* Lato-Bold.ttf */,
-				66FD055523CE3A6600C65D3C /* Lato-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		66FD055723CE3A6600C65D3C /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				66FD055823CE3A6600C65D3C /* Full Screen */,
-				66FD055A23CE3A6600C65D3C /* User Groups (Navigation Controller) */,
-				66FD055D23CE3A6600C65D3C /* Alert */,
-				66FD056023CE3A6600C65D3C /* User Groups (Stacked) */,
-				66FD056323CE3A6600C65D3C /* Basic */,
-				66FD056523CE3A6700C65D3C /* Alert (Transient) */,
-				66FD056723CE3A6700C65D3C /* User Groups */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		66FD055823CE3A6600C65D3C /* Full Screen */ = {
-			isa = PBXGroup;
-			children = (
-				66FD055923CE3A6600C65D3C /* FullScreenNavController.swift */,
-			);
-			path = "Full Screen";
-			sourceTree = "<group>";
-		};
-		66FD055A23CE3A6600C65D3C /* User Groups (Navigation Controller) */ = {
-			isa = PBXGroup;
-			children = (
-				66FD055B23CE3A6600C65D3C /* ProfileViewController.swift */,
-				66FD055C23CE3A6600C65D3C /* NavigationController.swift */,
-			);
-			path = "User Groups (Navigation Controller)";
-			sourceTree = "<group>";
-		};
-		66FD055D23CE3A6600C65D3C /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				66FD055E23CE3A6600C65D3C /* AlertViewController.swift */,
-				66FD055F23CE3A6600C65D3C /* AlertView.swift */,
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
-		66FD056023CE3A6600C65D3C /* User Groups (Stacked) */ = {
-			isa = PBXGroup;
-			children = (
-				66FD056123CE3A6600C65D3C /* StackedProfileViewController.swift */,
-				66FD056223CE3A6600C65D3C /* UserGroupStackedViewController.swift */,
-			);
-			path = "User Groups (Stacked)";
-			sourceTree = "<group>";
-		};
-		66FD056323CE3A6600C65D3C /* Basic */ = {
-			isa = PBXGroup;
-			children = (
-				66FD056423CE3A6600C65D3C /* BasicViewController.swift */,
-			);
-			path = Basic;
-			sourceTree = "<group>";
-		};
-		66FD056523CE3A6700C65D3C /* Alert (Transient) */ = {
-			isa = PBXGroup;
-			children = (
-				66FD056623CE3A6700C65D3C /* TransientAlertViewController.swift */,
-			);
-			path = "Alert (Transient)";
-			sourceTree = "<group>";
-		};
-		66FD056723CE3A6700C65D3C /* User Groups */ = {
-			isa = PBXGroup;
-			children = (
-				66FD056823CE3A6700C65D3C /* UserGroupViewController.swift */,
-				66FD056923CE3A6700C65D3C /* Presentables */,
-				66FD056C23CE3A6700C65D3C /* Views */,
-			);
-			path = "User Groups";
-			sourceTree = "<group>";
-		};
-		66FD056923CE3A6700C65D3C /* Presentables */ = {
-			isa = PBXGroup;
-			children = (
-				66FD056A23CE3A6700C65D3C /* UserGroupMemberPresentable.swift */,
-				66FD056B23CE3A6700C65D3C /* UserGroupHeaderPresentable.swift */,
-			);
-			path = Presentables;
-			sourceTree = "<group>";
-		};
-		66FD056C23CE3A6700C65D3C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				66FD056D23CE3A6700C65D3C /* UserGroupHeaderView.swift */,
-				66FD056E23CE3A6700C65D3C /* UserGroupMemberCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -460,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				66FD053723CE3A6600C65D3C /* PanModal */,
-				66FD054E23CE3A6600C65D3C /* Sample */,
 				66FD053323CE394A00C65D3C /* SAmpl */,
 				66FD052F23CE32CB00C65D3C /* File.swift */,
 				13B07FAE1A68108700A75B9A /* samplemaps */,
@@ -634,13 +396,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66FD057F23CE3A6700C65D3C /* Preview.png in Resources */,
-				66FD058123CE3A6700C65D3C /* Lato-Bold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				66FD058223CE3A6700C65D3C /* Lato-Regular.ttf in Resources */,
 				66FD057D23CE3A6700C65D3C /* Info2.plist in Resources */,
-				66FD058023CE3A6700C65D3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,39 +589,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66FD058423CE3A6700C65D3C /* FullScreenNavController.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				66FD053523CE397300C65D3C /* Fileee.swift in Sources */,
-				66FD059023CE3A6700C65D3C /* UserGroupHeaderView.swift in Sources */,
-				66FD057023CE3A6700C65D3C /* PanModalPresentable+Defaults.swift in Sources */,
-				66FD058823CE3A6700C65D3C /* AlertView.swift in Sources */,
 				66FD053023CE32CB00C65D3C /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				66FD057C23CE3A6700C65D3C /* DimmedView.swift in Sources */,
 				66FD057523CE3A6700C65D3C /* UIViewController+PanModalPresenter.swift in Sources */,
-				66FD058B23CE3A6700C65D3C /* BasicViewController.swift in Sources */,
-				66FD057123CE3A6700C65D3C /* PanModalPresentable.swift in Sources */,
-				66FD058923CE3A6700C65D3C /* StackedProfileViewController.swift in Sources */,
-				66FD057B23CE3A6700C65D3C /* PanContainerView.swift in Sources */,
-				66FD058723CE3A6700C65D3C /* AlertViewController.swift in Sources */,
-				66FD058623CE3A6700C65D3C /* NavigationController.swift in Sources */,
-				66FD057923CE3A6700C65D3C /* PanModalPresentationAnimator.swift in Sources */,
-				66FD057323CE3A6700C65D3C /* PanModalHeight.swift in Sources */,
-				66FD058E23CE3A6700C65D3C /* UserGroupMemberPresentable.swift in Sources */,
-				66FD058A23CE3A6700C65D3C /* UserGroupStackedViewController.swift in Sources */,
-				66FD057423CE3A6700C65D3C /* PanModalPresentable+UIViewController.swift in Sources */,
-				66FD058C23CE3A6700C65D3C /* TransientAlertViewController.swift in Sources */,
-				66FD057A23CE3A6700C65D3C /* PanModalPresentationController.swift in Sources */,
 				66FD057623CE3A6700C65D3C /* PanModalPresenter.swift in Sources */,
-				66FD059123CE3A6700C65D3C /* UserGroupMemberCell.swift in Sources */,
-				66FD058F23CE3A6700C65D3C /* UserGroupHeaderPresentable.swift in Sources */,
-				66FD057723CE3A6700C65D3C /* PanModalPresentationDelegate.swift in Sources */,
-				66FD057E23CE3A6700C65D3C /* SampleViewController.swift in Sources */,
-				66FD058523CE3A6700C65D3C /* ProfileViewController.swift in Sources */,
-				66FD057823CE3A6700C65D3C /* PanModalAnimator.swift in Sources */,
-				66FD058D23CE3A6700C65D3C /* UserGroupViewController.swift in Sources */,
-				66FD059223CE3A6700C65D3C /* AppDelegate.swift in Sources */,
-				66FD057223CE3A6700C65D3C /* PanModalPresentable+LayoutHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +703,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J5FM626PE2;
 				INFOPLIST_FILE = samplemaps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1000,6 +732,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = J5FM626PE2;
 				INFOPLIST_FILE = samplemaps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
