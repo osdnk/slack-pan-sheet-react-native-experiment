@@ -5,6 +5,7 @@
 import {AppRegistry, NativeModules} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
+import {registerModal} from "./Modal";
 
 const store = {
   value: 0,
@@ -16,6 +17,5 @@ const store = {
   }
 }
 
-
-AppRegistry.registerComponent(appName, () => App(store));
-AppRegistry.registerComponent("appName2", () => App(store));
+registerModal()
+AppRegistry.registerComponent(appName, () => App);

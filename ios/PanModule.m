@@ -45,11 +45,11 @@ RCT_EXPORT_MODULE();
 }
 
 
-RCT_EXPORT_METHOD(present)
+RCT_EXPORT_METHOD(present:(NSDictionary<NSString *, id> *)config)
 {
   
   UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-  [rootViewController presentPanModalWithView:rootView];
+  [rootViewController presentPanModalWithView:rootView config:config];
 }
 
 @end
