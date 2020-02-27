@@ -93,7 +93,6 @@
 - (void)addSubview:(UIView *)view {
   RCTExecuteOnMainQueue(^{
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-    NSDictionary *dict = [[NSMutableDictionary alloc] init];
     RCTView* sample = [[WrapperView alloc] initWithView:view bridge:self->_bridge];
     self->_view = sample;
     [rootViewController presentPanModalWithView:sample config:self];
