@@ -10,7 +10,17 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <React/RCTUIManager.h>
+#import <React/RCTUIManagerUtils.h>
 #import "samplemaps-Swift.h"
+
+#import <React/RCTViewManager.h>
+
+#import <React/RCTShadowView.h>
+
+#import <React/RCTView.h>
+
+
 
 
 @implementation AppDelegate

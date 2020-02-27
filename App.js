@@ -13,9 +13,8 @@ import {
   ScrollView,
   View,
   Text,
-  StatusBar,
   Switch,
-  SafeAreaView,
+  requireNativeComponent,
   TextInput,
 } from 'react-native';
 
@@ -26,7 +25,58 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import {present} from './Modal';
+import Modal from './Modal';
+const createAppWithHeader = headerHeight => {
+  return function App() {
+    return (
+      <View style={[StyleSheet.absoluteFillObject]}>
+        {/*<View*/}
+        {/*  style={{width: '100%', height: headerHeight, backgroundColor: 'red'}}*/}
+        {/*/>        {/*<View*/}
+        {/*  style={{width: '100%', height: headerHeight, backgroundColor: 'red'}}*/}
+        {/*/>*/}
+        <ScrollView style={styles.scrollView}>
+          <Header />
+          {global.HermesInternal == null ? null : (
+            <View style={styles.engine}>
+              <Text style={styles.footer}>Engine: Hermes</Text>
+            </View>
+          )}
+          <View style={styles.body}>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionDescription}>
+                Edit <Text style={styles.highlight}>App.js</Text> to change this
+                screen and then come back to see your edits.
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionDescription}>
+                <ReloadInstructions />
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text style={styles.sectionDescription}>
+                <DebugInstructions />
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Learn More</Text>
+              <Text style={styles.sectionDescription}>
+                Read the docs to discover what to do next:
+              </Text>
+            </View>
+            <LearnMoreLinks />
+          </View>
+        </ScrollView>
+      </View>
+    );
+  };
+};
+
+const SomeApp = createAppWithHeader(20);
 
 export default function ConfigScreen() {
   const [topOffset, setTopOffset] = React.useState(42);
@@ -54,32 +104,40 @@ export default function ConfigScreen() {
   const [headerHeight, setHeaderHeight] = React.useState(50);
   const [shortFormHeight, setShortFormHeight] = React.useState(500);
   const [startFromShortForm, setStartFromShortForm] = React.useState(false);
+  const [visible, setVisible] = React.useState(false);
 
   return (
     <ScrollView contentContainerStyle={{padding: 12}}>
       <Button
         title="SHOW MODAL"
-        onPress={() =>
-          present(createAppWithHeader(headerHeight), {
-            topOffset,
-            isShortFormEnabled,
-            longFormHeight,
-            cornerRadius,
-            springDamping,
-            transitionDuration,
-            anchorModalToLongForm,
-            allowsDragToDismiss,
-            allowsTapToDismiss,
-            isUserInteractionEnabled,
-            isHapticFeedbackEnabled,
-            shouldRoundTopCorners,
-            showDragIndicator,
-            headerHeight,
-            shortFormHeight,
-            startFromShortForm,
-          })
-        }
+        onPress={() => {
+          setVisible(false);
+          setImmediate(() => {
+            setVisible(true);
+          });
+        }}
       />
+      {visible ? (
+        <Modal
+          topOffset={topOffset}
+          isShortFormEnabled={isShortFormEnabled}
+          longFormHeight={longFormHeight}
+          cornerRadius={cornerRadius}
+          springDamping={springDamping}
+          transitionDuration={transitionDuration}
+          anchorModalToLongForm={anchorModalToLongForm}
+          allowsDragToDismiss={allowsDragToDismiss}
+          allowsTapToDismiss={allowsTapToDismiss}
+          isUserInteractionEnabled={isUserInteractionEnabled}
+          isHapticFeedbackEnabled={isHapticFeedbackEnabled}
+          shouldRoundTopCorners={shouldRoundTopCorners}
+          showDragIndicator={showDragIndicator}
+          headerHeight={headerHeight}
+          shortFormHeight={400}
+          startFromShortForm={startFromShortForm}>
+          <SomeApp />
+        </Modal>
+      ) : null}
 
       <View style={{flexDirection: 'row'}}>
         <View style={{flexDirection: 'column', padding: 10}}>
@@ -190,54 +248,6 @@ export default function ConfigScreen() {
     </ScrollView>
   );
 }
-const createAppWithHeader = headerHeight => {
-  return function App() {
-    return (
-      <>
-        <StatusBar barStyle="dark-content" />
-        <View
-          style={{width: '100%', height: headerHeight, backgroundColor: 'red'}}
-        />
-        <ScrollView style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </>
-    );
-  };
-};
 
 const styles = StyleSheet.create({
   scrollView: {

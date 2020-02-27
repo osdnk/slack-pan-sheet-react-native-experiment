@@ -12,10 +12,10 @@ import PanModal
 
 
 class PanModalViewController: UIViewController, PanModalPresentable {
-  var config: Dictionary<String, Any> = [:]
-  convenience init(config: Dictionary<String, Any>) {
+  var config2: UIView?
+  convenience init(config: UIView) {
     self.init()
-    self.config = config
+    self.config2 = config
   }
 
   
@@ -44,66 +44,68 @@ class PanModalViewController: UIViewController, PanModalPresentable {
   }
   
   var shortFormHeight: PanModalHeight {
-    let height: CGFloat = config["shortFormHeight"] == nil ? 300 : config["shortFormHeight"] as! CGFloat
+    let height: CGFloat = CGFloat(truncating: self.config2?.value(forKey: "shortFormHeight") as! NSNumber)
     return isShortFormEnabled ? .contentHeight(height) : longFormHeight
   }
   
   var topOffset: CGFloat {
-    let topOffset: CGFloat = config["topOffset"] == nil ? 42.0 : config["topOffset"] as! CGFloat
+    let topOffset: CGFloat = CGFloat(truncating: self.config2?.value(forKey: "topOffset") as! NSNumber)
     return topLayoutGuide.length + topOffset
   }
   
   var isShortFormEnabledInternal = 2
   var isShortFormEnabled: Bool {
-    if isShortFormEnabledInternal > 0 && (config["startFromShortForm"] == nil || !(config["startFromShortForm"] as! Bool)) {
+    let startFromShortForm = self.config2?.value(forKey: "startFromShortForm") as! Bool
+    if isShortFormEnabledInternal > 0 && !startFromShortForm {
       isShortFormEnabledInternal -= 1
       return false
     }
-    return config["isShortFormEnabled"] == nil ? true : config["isShortFormEnabled"] as! Bool
+    return self.config2?.value(forKey: "isShortFormEnabled") as! Bool
   }
   
   var longFormHeight: PanModalHeight {
-    return .maxHeight
+    if self.config2?.value(forKey: "longFormHeight") == nil {
+      return .maxHeight
+    }
+    return .contentHeight(CGFloat(truncating: self.config2?.value(forKey: "longFormHeight") as! NSNumber))
   }
   
   var cornerRadius: CGFloat {
-    return config["cornerRadius"] == nil ? 8 : config["cornerRadius"] as! CGFloat
+    return CGFloat(truncating: self.config2?.value(forKey: "cornerRadius") as! NSNumber)
   }
   
   var springDamping: CGFloat {
-    return config["springDamping"] == nil ? 0.8 : config["springDamping"] as! CGFloat
+    return CGFloat(truncating: self.config2?.value(forKey: "springDamping") as! NSNumber)
   }
   
   var transitionDuration: Double {
-    return config["transitionDuration"] == nil ? 0.5 : config["transitionDuration"] as! Double
+    return Double(truncating: self.config2?.value(forKey: "transitionDuration") as! NSNumber)
   }
   
   var anchorModalToLongForm: Bool {
-    return config["anchorModalToLongForm"] == nil ? true : config["anchorModalToLongForm"] as! Bool
+    return self.config2?.value(forKey: "anchorModalToLongForm") as! Bool
   }
   
   var allowsDragToDismiss: Bool {
-    return config["allowsDragToDismiss"] == nil ? true : config["allowsDragToDismiss"] as! Bool
+    return self.config2?.value(forKey: "allowsDragToDismiss") as! Bool
   }
   
   var allowsTapToDismiss: Bool {
-    return config["allowsTapToDismiss"] == nil ? true : config["allowsTapToDismiss"] as! Bool
+    return self.config2?.value(forKey: "allowsTapToDismiss") as! Bool
   }
   
   var isUserInteractionEnabled: Bool {
-    return config["isUserInteractionEnabled"] == nil ? true : config["isUserInteractionEnabled"] as! Bool
-  }
+    return self.config2?.value(forKey: "isUserInteractionEnabled") as! Bool  }
   
   var isHapticFeedbackEnabled: Bool {
-    return config["isHapticFeedbackEnabled"] == nil ? true : config["isHapticFeedbackEnabled"] as! Bool
-  }
+    return self.config2?.value(forKey: "isHapticFeedbackEnabled") as! Bool  }
   
   var shouldRoundTopCorners: Bool {
-    return config["shouldRoundTopCorners"] == nil ? true : config["shouldRoundTopCorners"] as! Bool
+    return self.config2?.value(forKey: "shouldRoundTopCorners") as! Bool
   }
   
   var showDragIndicator: Bool {
-    return config["showDragIndicator"] == nil ? true : config["showDragIndicator"] as! Bool
+    return self.config2?.value(forKey: "showDragIndicator") as! Bool
   }
   
   var scrollIndicatorInsets: UIEdgeInsets {
@@ -113,7 +115,7 @@ class PanModalViewController: UIViewController, PanModalPresentable {
 
   
   func shouldPrioritize(panModalGestureRecognizer: UIPanGestureRecognizer) -> Bool {
-    let headerHeight: CGFloat = config["headerHeight"] == nil ? 21 : config["headerHeight"] as! CGFloat
+    let headerHeight: CGFloat = CGFloat(truncating: self.config2?.value(forKey: "headerHeight") as! NSNumber)
     let location = panModalGestureRecognizer.location(in: view)
     return location.y < headerHeight
   }
@@ -122,14 +124,13 @@ class PanModalViewController: UIViewController, PanModalPresentable {
 
 
 extension UIViewController {
-  @objc public func presentPanModal(view: UIView, config: Dictionary<String, Any>) {
+  @objc public func presentPanModal(view: UIView, config: UIView) {
     
     let viewControllerToPresent: UIViewController & PanModalPresentable = PanModalViewController(config: config)
     viewControllerToPresent.view = view
     let sourceView: UIView? = nil, sourceRect: CGRect = .zero
     
     self.presentPanModal(viewControllerToPresent, sourceView: sourceView, sourceRect: sourceRect)
-    
   }
   
 }
