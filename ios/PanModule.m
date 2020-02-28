@@ -7,16 +7,10 @@
 #import <React/RCTUIManager.h>
 #import <React/RCTUIManagerUtils.h>
 #import "samplemaps-Swift.h"
-
 #import <React/RCTViewManager.h>
-
 #import <React/RCTShadowView.h>
-
 #import <React/RCTView.h>
-
 #import <objc/runtime.h>
-
-
 
 @interface HelperView : UIView
 @end
@@ -36,8 +30,6 @@
 }
 @end
 
-
-
 @interface InvisibleView: UIView
 @property (nonatomic, nonnull) NSNumber *topOffset;
 @property (nonatomic) BOOL isShortFormEnabled;
@@ -56,7 +48,6 @@
 @property (nonatomic, nonnull) NSNumber *shortFormHeight;
 @property (nonatomic) BOOL startFromShortForm;
 @end
-
 
 @implementation InvisibleView {
   __weak RCTBridge *_bridge;
@@ -88,7 +79,6 @@
   return self;
 }
 
-
 - (void)addSubview:(UIView *)view {
   RCTExecuteOnMainQueue(^{
     if (self->addedSubview) {
@@ -107,7 +97,6 @@
 @end
 
 @interface ModalViewManager : RCTViewManager
-
 @end
 
 @implementation ModalViewManager
@@ -130,9 +119,7 @@ RCT_EXPORT_VIEW_PROPERTY(shouldRoundTopCorners, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(showDragIndicator, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(startFromShortForm, BOOL)
 
-
-- (UIView *)view
-{
+- (UIView *)view {
   return [[InvisibleView alloc] initWithBridge:self.bridge];
 }
 
