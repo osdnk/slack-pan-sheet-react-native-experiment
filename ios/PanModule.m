@@ -14,22 +14,20 @@
 
 #import <React/RCTView.h>
 
+#import <objc/runtime.h>
 
 
-@interface WrapperView : UIView
+
+@interface HelperView : UIView
 @end
 
-@implementation WrapperView {
-  __weak RCTView *_view;
+@implementation HelperView {
+  __weak UIView *_view;
   __weak RCTBridge *_bridge;
 }
-- (instancetype) initWithView: (RCTView *) view bridge:(RCTBridge *)bridge {
-  if (self = [super init]) {
-    _view = view;
-    _bridge = bridge;
-  }
-  [self addSubview:view];
-  return self;
+- (void) setView: (UIView *) view bridge:(RCTBridge *)bridge {
+  _view = view;
+  _bridge = bridge;
 }
 
 - (void)layoutSubviews {
@@ -40,7 +38,7 @@
 
 
 
-@interface CustomView: UIView
+@interface InvisibleView: UIView
 @property (nonatomic, nonnull) NSNumber *topOffset;
 @property (nonatomic) BOOL isShortFormEnabled;
 @property (nonatomic, nullable) NSNumber *longFormHeight;
@@ -60,9 +58,9 @@
 @end
 
 
-@implementation CustomView {
+@implementation InvisibleView {
   __weak RCTBridge *_bridge;
-  __weak RCTView *_view;
+  BOOL addedSubview;
 }
 
 - (instancetype)initWithBridge:(RCTBridge *)bridge {
@@ -90,12 +88,18 @@
   return self;
 }
 
+
 - (void)addSubview:(UIView *)view {
   RCTExecuteOnMainQueue(^{
+    if (self->addedSubview) {
+      return;
+    }
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-    RCTView* sample = [[WrapperView alloc] initWithView:view bridge:self->_bridge];
-    self->_view = sample;
-    [rootViewController presentPanModalWithView:sample config:self];
+    object_setClass(view, [HelperView class]);
+    [(HelperView *)view setView:view bridge:self->_bridge];
+    self->addedSubview = YES;
+    
+    [rootViewController presentPanModalWithView:view config:self];
   });
   
 }
@@ -129,7 +133,7 @@ RCT_EXPORT_VIEW_PROPERTY(startFromShortForm, BOOL)
 
 - (UIView *)view
 {
-  return [[CustomView alloc] initWithBridge:self.bridge];
+  return [[InvisibleView alloc] initWithBridge:self.bridge];
 }
 
 @end
